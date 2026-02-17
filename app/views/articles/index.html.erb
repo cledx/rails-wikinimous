@@ -1,0 +1,11 @@
+<div class="d-flex justify-content-between px-3">
+    <h2>Articles</h2>
+    <div class="btn btn-primary justify-content-center align-items-center text-white text-decoration-none"><%= link_to 'Create New Article' , new_article_path %></div>
+</div>
+<ul>
+    <% @articles.each do |article| %>
+        <li>
+            <%= link_to article.title, article_path(article) %>
+        </li>
+        <% end %>
+</ul>
